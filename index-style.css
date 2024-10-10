@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url(img/bg.png);
+  background-size: cover;
+}
+
+nav {
+  display: flex;
+  position: sticky;
+  align-items: center;
+  padding: 30px 100px;
+}
+.logo {
+  max-height: 60px;
+}
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px 20px;
+}
+nav ul li a {
+  color: #1d1d24;
+  position: relative;
+  padding: 5px 0;
+}
+nav ul li a:hover {
+  color: #fd4766;
+}
+nav ul li a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #fd4766;
+  transition: 0.3s;
+  bottom: 0;
+}
+nav ul li a:hover:after {
+  width: 100%;
+}
+nav ul li span{
+    background-color: #fd4766;
+    color: aliceblue;
+    padding: 10px;
+  }
+
+  
+    .btn {
+      margin: 10px auto;
+    }
+  
+  
+.btn {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 16px 40px;
+  border-radius: 500px;
+  display: inline-block;
+  font-weight: 500;
+  transition: all 0.4s ease-in-out;
+  background-size: 152% 100%;
+  background: #fd4766;
+  border: 2px solid #fd4766;
+}
+.btn:hover {
+  background: transparent;
+  border-color: #fd4766;
+  color: #fd4766;
+}
+
+.content .title {
+  color: #0a0a0a;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  display: inline-block;
+  margin-bottom: 20px;
+  background: linear-gradient(
+    120deg,
+    #1c99fe 20.69%,
+    #7644ff 50.19%,
+    #fd4766 79.69%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.content h1 {
+  color: #1f1f25;
+  font-size: 75px;
+  font-weight: 900;
+  line-height: 90px;
+  text-transform: inherit;
+  width: 70%;
+}
+.content h1 span {
+  color: #fd4766;
+}
+.content p {
+  width: 55%;
+  color: #202020;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+
+/* education */
+
+a{color:$linkColor; text-decoration:none;}
+.clearfix::after, .clearfix::before {
+  content: " ";
+	display: table;
+}
+.clearfix::after{clear:both;}
+.bold {color:$boldColor; font-weight:400;}
+
+.resume-wrapper {
+  position:relative;
+  text-align:center;
+  height:100%;
+}
+
+.container {
+  min-height:600px;
+} 
+
+.profile {
+  background:$profileBg;
+  width:40%;
+  float:left;
+  color:$profileColor;
+  @include breakpoint(brother-bear) { width: 100%; }
+  .name-wrapper {
+    float:left;
+    width:60%;
+  }
+  h1 {
+    font-size:2.5em;
+    text-align:left;
+    font-family: 'Varela Round', sans-serif;
+    color:$boldColor;
+    text-transform:uppercase;
+    line-height:1em;
+    padding-top:40px; 
+    @include breakpoint(mama-bear) {
+       padding-top:20px;
+    }
+    @include breakpoint(baby-bear) {
+      font-size:1.8em;  
+      padding-top:20px;
+    } 
+  }
+  li {
+      margin-bottom:10px;
+    }
+  .picture-resume-wrapper {
+    width:40%;
+    display:block;
+    float:left;
+    @include breakpoint(mama-bear) {
+       width:100%;
+    }
+  }
+  .picture-resume {
+    width:220px;
+    height:220px;
+    background-size:cover;
+    border-radius:50%;
+    margin-right:0px;
+    display:table;
+    position:relative;
+    vertical-align:middle;
+    span {
+        display:table-cell;
+        vertical-align: middle;
+        position:relative;
+        margin:0 auto;
+        z-index:10;
+       text-align:center
+    }
+    img {
+      border-radius:50%;
+      width:130px;
+      @include breakpoint(papa-bear) {
+        width:80px;
+      }
+      @include breakpoint(mama-bear) {
+        width:120px;
+        height:120px;
+      }
+    }
+    @include breakpoint(papa-bear) {
+      width:150px;
+      height:150px;
+    }
+    @include breakpoint(mama-bear) {
+      width:200px;
+      height:200px;
+    }
+     @include breakpoint(baby-bear) { width:180px;height:180px; } 
+  }
+  .contact-info{
+    margin-top:100px;
+    font-weight:300;
+    @include breakpoint(mama-bear) {margin-top:70px; } 
+    @include breakpoint(baby-bear) { margin-top:50px; } 
+  }
+  .list-titles {
+    float:left;
+    text-align:left;
+    font-weight:600;
+    width:40%;
+    color:$boldColor;
+  }
+  .list-content{
+    float:left;
+    width:60%;
+    text-align:left;
+    font-weight:300;
+  }
+  .contact-presentation {
+    text-align:left;
+    font-weight:300;
+    margin-top:100px;
+    margin-bottom:100px;
+    @include breakpoint(mama-bear) {margin-top:70px;margin-bottom:70px; } 
+    @include breakpoint(brother-bear) {margin-top:50px;margin-bottom:50px; } 
+    
+  }
+  svg {
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    //display:none;
+  }
+
+  .st0, .st1 {
+    fill:#66cc99;
+  }
+
+}
+.experience {
+  display: flex;
+  position: relative;
+  margin-left: 50px;
+  background:$skillsBg;
+  width:60%;
+  float:left;
+  position:relative;
+  color:$skillsColor;
+  font-weight:300;
+  min-height:100%;
+  min-height:100vh;
+  
+  @include breakpoint(brother-bear) { width: 100%; } 
+
+  h3.experience-title {
+    color:#fd4766;
+    text-align:left;
+    text-transform:uppercase;
+    font-size:1.2em;
+    margin-bottom:20px;
+    font-weight:400;
+    
+  }
+  .company-wrapper {
+    width:30%;
+    float:left;
+    text-align:left;
+    padding-right:5%;
+    margin-bottom:60px;
+    @include breakpoint(baby-bear) {width:100%; margin-bottom:20px;} 
+  }
+  .job-wrapper {
+    width:70%;
+    float:left;
+    text-align:left;
+    padding-right:5%;
+    margin-bottom:60px;
+    @include breakpoint(baby-bear) {width:100%;margin-bottom:40px;} 
+  }
+  .experience-title {
+      color:#fd4766;
+      margin-bottom:15px;;
+    }
+}
+
+.section-padding {
+ padding:60px 60px 40px 40px;
+ @include breakpoint(brother-bear) { padding:80px 15% 40px 10%; }
+ @include breakpoint(baby-bear) { padding:40px 10% 20px 5%; }
+}
+
+.section-wrapper {
+  width:50%;
+  float:left;
+  text-align:left;
+  font-weight:300px;
+  margin-bottom:20px;
+  @include breakpoint(baby-bear) {width:100%;}
+  &:nth-child(3){ 
+    padding-right:8%;
+  }
+  h3.section-title {
+    color:$linkColor;
+    text-align:left;
+    text-transform:uppercase;
+    font-size:1.2em;
+    margin-bottom:20px;
+    font-weight:400;
+  }
+  .skill-percentage {
+    margin-bottom:10px;
+    position:relative;
+
+
+  }
+  
+}
+
+@keyframes skill_1 {from {width:0%;}to {width:80%;}}
+@keyframes skill_2 {from {width:0%;}to {width:90%;}}
+@keyframes skill_3 {from {width:0%;}to {width:50%;}}
+@keyframes skill_4 {from {width:0%;}to {width:60%;}}
+@keyframes skill_5 {from {width:0%;}to {width:70%;}}  
+@keyframes skill_6 {from {width:0%;}to {width:70%;}}
+@keyframes skill_7 {from {width:0%;}to {width:70%;}}
+
+.content {
+  position: relative;
+  top: 35%;
+  left: 8%;
+
+}
+.container{
+  position: relative;
+  margin-left: 80px;
+}
+
+.section-div{
+  margin-bottom: 20px;
+}
+.section-div h3{
+  color: #fd4766;
+}
+nav{
+  display:flex ;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  justify-content: center;
+
+}
+
